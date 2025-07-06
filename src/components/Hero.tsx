@@ -1,6 +1,5 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { SplitText } from "gsap/all";
 import { FaCirclePlay, FaPlaystation, FaXbox } from "react-icons/fa6";
 
 const Hero = () => {
@@ -14,13 +13,6 @@ const Hero = () => {
         pin: true,
       },
     });
-
-    const split = new SplitText("#story-text", {
-      type: "lines",
-      linesClass: "split-line",
-    });
-
-    console.log(split);
 
     heroTimeline
       .to(".hero-mask", {
