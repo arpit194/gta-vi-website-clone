@@ -56,18 +56,21 @@ const Hero = () => {
         duration: 0,
       })
       .to(".will-reveal-1", {
-        width: "200px",
-        top: "115px",
-        left: "calc(50% + 10px)",
-        duration: 1,
-        ease: "power1.inOut",
-      })
-      .to(".will-reveal-2, .will-reveal-1", {
         opacity: 1,
-        scale: 0.5,
+        scale: 0.35,
         duration: 0.5,
         ease: "power1.inOut",
       })
+      .to(
+        ".will-reveal-2",
+        {
+          opacity: 1,
+          scale: 0.5,
+          duration: 0.5,
+          ease: "power1.inOut",
+        },
+        "-=0.5"
+      )
       .from(".release-reveal", {
         "--reveal-radius": "0%",
         duration: 1,
@@ -140,19 +143,6 @@ const Hero = () => {
           alt="gta vi logo"
           className="will-reveal-2 absolute top-10 left-1/2 -translate-x-1/2 z-1 opacity-0"
         />
-        {/* <div className=" top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/4 bg-gradient-to-b from-fuchsia-400 to-rose-300 text-9xl font-extrabold bg-clip-text text-transparent release-reveal flex flex-col justify-center items-center gap-10">
-          <h2 className="w-1/2 text-left text-7xl font-bold">
-            Vice City, USA.
-          </h2>
-          <p className="w-1/2 text-left text-4xl font-semibold">
-            Jason and Lucia have always known the deck is stacked against them.
-            But when an easy score goes wrong, they find themselves on the
-            darkest side of the sunniest place in America, in the middle of a
-            criminal conspiracy stretching across the state of Leonida — forced
-            to rely on each other more than ever if they want to make it out
-            alive.
-          </p>
-        </div> */}
         <div className="text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/4 font-primary bg-gradient-to-b from-fuchsia-400 to-rose-300 text-9xl font-extrabold bg-clip-text text-transparent release-reveal">
           <div className="text-9xl font-extrabold">COMING</div>
           <div className="text-9xl font-extrabold">MAY 26</div>
