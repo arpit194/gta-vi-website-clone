@@ -53,18 +53,25 @@ const Hero = () => {
       })
       .to(".will-reveal-1", {
         opacity: 1,
+        translateX: "0%",
         duration: 0,
       })
       .to(".will-reveal-1", {
         opacity: 1,
+        translateX: "0%",
         scale: 0.35,
         duration: 0.5,
         ease: "power1.inOut",
+      })
+      .to(".will-reveal-2", {
+        translateX: "0%",
+        duration: 0,
       })
       .to(
         ".will-reveal-2",
         {
           opacity: 1,
+          translateX: "0%",
           scale: 0.5,
           duration: 0.5,
           ease: "power1.inOut",
