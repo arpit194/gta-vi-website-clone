@@ -1,1 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-primary: "Raleway", "sans-serif";
+}
+
+@layer utilities {
+  .hero-mask {
+    mask-image: url("/images/mask.png");
+    mask-repeat: no-repeat;
+    mask-size: 10000%;
+    mask-position: 52% 20%;
+  }
+
+  @property --reveal-radius {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+  }
+  .release-reveal {
+    --reveal-radius: 100%;
+    -webkit-mask-image: radial-gradient(
+      circle at center bottom,
+      rgba(0, 0, 0, 1) var(--reveal-radius),
+      rgba(0, 0, 0, 0) calc(var(--reveal-radius) + 20%)
+    );
+    -webkit-mask-size: 100% 200%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: top center;
+
+    mask-image: radial-gradient(
+      circle at center bottom,
+      rgba(0, 0, 0, 1) var(--reveal-radius),
+      rgba(0, 0, 0, 0) calc(var(--reveal-radius) + 20%)
+    );
+    mask-size: 100% 200%;
+    mask-repeat: no-repeat;
+    mask-position: top center;
+  }
+
+  .story-reveal {
+    --reveal-radius: 100%;
+    -webkit-mask-image: radial-gradient(
+      circle at center bottom,
+      rgba(0, 0, 0, 1) var(--reveal-radius),
+      rgba(0, 0, 0, 0) calc(var(--reveal-radius) + 20%)
+    );
+    -webkit-mask-size: 100% 200%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: top center;
+
+    mask-image: radial-gradient(
+      circle at center bottom,
+      rgba(0, 0, 0, 1) var(--reveal-radius),
+      rgba(0, 0, 0, 0) calc(var(--reveal-radius) + 20%)
+    );
+    mask-size: 100% 200%;
+    mask-repeat: no-repeat;
+    mask-position: top center;
+  }
+}
