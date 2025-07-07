@@ -1,0 +1,69 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  isolation: isolate;
+  z-index: 1;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  font-family: "Raleway", "sans-serif";
+}
+
+.storyContainer {
+  /* bg-gradient-to-b from-fuchsia-400 to-rose-300 text-9xl font-extrabold bg-clip-text text-transparent story-reveal flex flex-col justify-center items-center gap-10 */
+  --gradient-color-from: oklch(74% 0.238 322.16);
+  --gradient-color-to: oklch(81% 0.117 11.638);
+  background-image: linear-gradient(
+    to bottom,
+    var(--gradient-color-from),
+    var(--gradient-color-to)
+  );
+  font-weight: 800;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  h2 {
+    width: 50%;
+    text-align: left;
+    font-size: 5vw;
+    font-weight: 700;
+  }
+  p {
+    width: 50%;
+    text-align: left;
+    font-size: 2vw;
+    font-weight: 600;
+  }
+}
+
+.storyReveal {
+  --reveal-radius: 100%;
+  -webkit-mask-image: radial-gradient(
+    circle at center bottom,
+    rgba(0, 0, 0, 1) var(--reveal-radius),
+    rgba(0, 0, 0, 0) calc(var(--reveal-radius) + 20%)
+  );
+  -webkit-mask-size: 100% 200%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: top center;
+
+  mask-image: radial-gradient(
+    circle at center bottom,
+    rgba(0, 0, 0, 1) var(--reveal-radius),
+    rgba(0, 0, 0, 0) calc(var(--reveal-radius) + 20%)
+  );
+  mask-size: 100% 200%;
+  mask-repeat: no-repeat;
+  mask-position: top center;
+}

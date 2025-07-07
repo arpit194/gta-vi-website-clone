@@ -1,5 +1,5 @@
 import { ScrollTrigger } from "gsap/all";
-import Hero from "./components/Hero";
+import Hero from "./components/hero/Hero";
 import Navbar from "./components/Navbar";
 import gsap from "gsap";
 import { useEffect, useState } from "react";
